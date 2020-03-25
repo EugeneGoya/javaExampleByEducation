@@ -1,0 +1,108 @@
+INFO   [15:21:53.400] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [15:21:53.404] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [15:21:53.504] [main] i.d.s.ServerFactory -  Starting hello-world 
+INFO   [15:21:53.657] [main] o.e.j.s.SetUIDListener -  Opened application@6c37bd27{HTTP/1.1,[http/1.1]}{0.0.0.0:8083} 
+INFO   [15:21:53.658] [main] o.e.j.s.SetUIDListener -  Opened application@25d3cfc8{SSL,[ssl, http/1.1]}{0.0.0.0:8443} 
+INFO   [15:21:53.659] [main] o.e.j.s.SetUIDListener -  Opened admin@30331109{HTTP/1.1,[http/1.1]}{0.0.0.0:8081} 
+INFO   [15:21:53.659] [main] o.e.j.s.SetUIDListener -  Opened admin@2571066a{SSL,[ssl, http/1.1]}{0.0.0.0:8444} 
+INFO   [15:21:53.661] [main] o.e.j.s.Server -  jetty-9.4.26.v20200117; built: 2020-01-17T12:35:33.676Z; git: 7b38981d25d14afb4a12ff1f2596756144edf695; jvm 12.0.2+10 
+ERROR  [15:21:53.678] [main] i.d.c.ServerCommand -  Unable to start server, shutting down 
+java.lang.IllegalStateException: no valid keystore
+	at org.eclipse.jetty.util.security.CertificateUtils.getKeyStore(CertificateUtils.java:50)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.loadKeyStore(SslContextFactory.java:1188)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.load(SslContextFactory.java:323)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.doStart(SslContextFactory.java:245)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at com.ApplicationStarter.main(ApplicationStarter.java:12)
+INFO   [15:23:20.124] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [15:23:20.128] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [15:23:20.219] [main] i.d.s.ServerFactory -  Starting hello-world 
+INFO   [15:23:20.376] [main] o.e.j.s.SetUIDListener -  Opened application@6c37bd27{HTTP/1.1,[http/1.1]}{0.0.0.0:8087} 
+INFO   [15:23:20.376] [main] o.e.j.s.SetUIDListener -  Opened application@25d3cfc8{SSL,[ssl, http/1.1]}{0.0.0.0:8448} 
+INFO   [15:23:20.377] [main] o.e.j.s.SetUIDListener -  Opened admin@30331109{HTTP/1.1,[http/1.1]}{0.0.0.0:8089} 
+INFO   [15:23:20.377] [main] o.e.j.s.SetUIDListener -  Opened admin@2571066a{SSL,[ssl, http/1.1]}{0.0.0.0:8441} 
+INFO   [15:23:20.379] [main] o.e.j.s.Server -  jetty-9.4.26.v20200117; built: 2020-01-17T12:35:33.676Z; git: 7b38981d25d14afb4a12ff1f2596756144edf695; jvm 12.0.2+10 
+ERROR  [15:23:20.392] [main] i.d.c.ServerCommand -  Unable to start server, shutting down 
+java.lang.IllegalStateException: no valid keystore
+	at org.eclipse.jetty.util.security.CertificateUtils.getKeyStore(CertificateUtils.java:50)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.loadKeyStore(SslContextFactory.java:1188)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.load(SslContextFactory.java:323)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.doStart(SslContextFactory.java:245)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at com.ApplicationStarter.main(ApplicationStarter.java:12)
+INFO   [15:26:56.189] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [15:26:56.195] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [15:26:56.299] [main] i.d.s.ServerFactory -  Starting hello-world 
+INFO   [15:26:56.481] [main] o.e.j.s.SetUIDListener -  Opened application@6c37bd27{HTTP/1.1,[http/1.1]}{0.0.0.0:8083} 
+INFO   [15:26:56.482] [main] o.e.j.s.SetUIDListener -  Opened application@25d3cfc8{SSL,[ssl, http/1.1]}{0.0.0.0:8443} 
+INFO   [15:26:56.482] [main] o.e.j.s.SetUIDListener -  Opened admin@30331109{HTTP/1.1,[http/1.1]}{0.0.0.0:8081} 
+INFO   [15:26:56.483] [main] o.e.j.s.SetUIDListener -  Opened admin@2571066a{SSL,[ssl, http/1.1]}{0.0.0.0:8444} 
+INFO   [15:26:56.485] [main] o.e.j.s.Server -  jetty-9.4.26.v20200117; built: 2020-01-17T12:35:33.676Z; git: 7b38981d25d14afb4a12ff1f2596756144edf695; jvm 12.0.2+10 
+ERROR  [15:26:56.499] [main] i.d.c.ServerCommand -  Unable to start server, shutting down 
+java.lang.IllegalStateException: no valid keystore
+	at org.eclipse.jetty.util.security.CertificateUtils.getKeyStore(CertificateUtils.java:50)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.loadKeyStore(SslContextFactory.java:1188)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.load(SslContextFactory.java:323)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.doStart(SslContextFactory.java:245)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at com.ApplicationStarter.main(ApplicationStarter.java:12)
+INFO   [15:30:56.771] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [15:30:56.775] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [15:30:56.856] [main] i.d.s.ServerFactory -  Starting application 
+INFO   [15:30:57.006] [main] o.e.j.s.SetUIDListener -  Opened application@6c37bd27{HTTP/1.1,[http/1.1]}{0.0.0.0:8083} 
+INFO   [15:30:57.007] [main] o.e.j.s.SetUIDListener -  Opened application@25d3cfc8{SSL,[ssl, http/1.1]}{0.0.0.0:8443} 
+INFO   [15:30:57.008] [main] o.e.j.s.SetUIDListener -  Opened admin@30331109{HTTP/1.1,[http/1.1]}{0.0.0.0:8081} 
+INFO   [15:30:57.008] [main] o.e.j.s.SetUIDListener -  Opened admin@2571066a{SSL,[ssl, http/1.1]}{0.0.0.0:8444} 
+INFO   [15:30:57.010] [main] o.e.j.s.Server -  jetty-9.4.26.v20200117; built: 2020-01-17T12:35:33.676Z; git: 7b38981d25d14afb4a12ff1f2596756144edf695; jvm 12.0.2+10 
+ERROR  [15:30:57.025] [main] i.d.c.ServerCommand -  Unable to start server, shutting down 
+java.lang.IllegalStateException: no valid keystore
+	at org.eclipse.jetty.util.security.CertificateUtils.getKeyStore(CertificateUtils.java:50)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.loadKeyStore(SslContextFactory.java:1188)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.load(SslContextFactory.java:323)
+	at org.eclipse.jetty.util.ssl.SslContextFactory.doStart(SslContextFactory.java:245)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at com.ApplicationStarter.main(ApplicationStarter.java:12)
