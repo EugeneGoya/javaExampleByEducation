@@ -5,6 +5,8 @@ import com.db.FlatEntityDao;
 import com.db.FlatUserEntity;
 import com.service.ToolService;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -29,10 +31,39 @@ public class FlatUserEntityResources {
 
     @GET
     @Timed
-    @Path("/insert")
-    public String insertPerson() {
+    @Path("/import")
+    public String importDateFromFile() {
         toolService.importData(userFilePath, cityFilePath, countryFilePath);
         return "Import data from file ";
     }
 
+    @POST
+    @Timed
+    @Path("/insert")
+    public String insert(@NotNull @Valid FlatUserEntity flatUserEntity) {
+        flatEntityDao.insert(flatUserEntity);
+        return "insert user correct ";
+    }
+
+    @GET
+    @Timed
+    @Path("/find")
+    public FlatUserEntity findByCity(String city) {
+        return flatEntityDao.findByCity(city);
+    }
+
+
+    @GET
+    @Timed
+    @Path("/update")
+    public void updatePerson(@NotNull @Valid FlatUserEntity flatUserEntity) {
+        flatEntityDao.updateСountry(flatUserEntity);
+    }
+
+    @GET
+    @Timed
+    @Path("/delete")
+    public void deleteFlatUserPerson(@NotNull @Valid FlatUserEntity flatUserEntity) {
+        flatEntityDao.deleteFlatUser(flatUserEntity.getId());
+    }
 }

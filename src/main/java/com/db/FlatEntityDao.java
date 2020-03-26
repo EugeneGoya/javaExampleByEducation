@@ -44,13 +44,13 @@ public class FlatEntityDao {
         return flatUserEntities;
     }
 
-    private static FlatUserEntity findByEmail(String email) {
+    public  FlatUserEntity findByCity(String city) {
         Session session = sessionFactory.openSession();
         Transaction tx = null;
         FlatUserEntity flatUserEntity = null;
         try {
             tx = session.beginTransaction();
-            flatUserEntity = session.createQuery("select e from FlatUserEntity e where e.email =:email", FlatUserEntity.class).setParameter("email", email).getSingleResult();
+            flatUserEntity = session.createQuery("select f from FlatUserEntity f where f.cityName =:city", FlatUserEntity.class).setParameter("city", city).getSingleResult();
             tx.commit();
         } catch (HibernateException he) {
             if (tx != null) {
@@ -62,7 +62,7 @@ public class FlatEntityDao {
         return flatUserEntity;
     }
 
-    private static void deletePerson(int id) {
+    public  void deleteFlatUser(int id) {
         Session session = sessionFactory.openSession();
         Transaction tx = null;
         try {
@@ -79,14 +79,14 @@ public class FlatEntityDao {
         }
     }
 
-    private static void updatePerson(FlatUserEntity flatUserEntity) {
+    public  void updateСountry(FlatUserEntity flatUserEntity) {
         Session session = sessionFactory.openSession();
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            FlatUserEntity p = session.get(FlatUserEntity.class, flatUserEntity.getId());
-            p.setCountryName(flatUserEntity.getCountryName());
-            session.update(p);
+            FlatUserEntity flatUser = session.get(FlatUserEntity.class, flatUserEntity.getId());
+            flatUser.setCountryName(flatUserEntity.getCountryName());
+            session.update(flatUser);
             tx.commit();
         } catch (HibernateException he) {
             if (tx != null) {
