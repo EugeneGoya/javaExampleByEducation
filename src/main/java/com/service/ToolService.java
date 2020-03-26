@@ -1,13 +1,12 @@
 package com.service;
 
 import com.convert.UserConverter;
-import com.db.FlatUserEntityDao;
-import com.models.FlatUserEntity;
+import com.db.FlatUserEntity;
+import com.db.FlatEntityDao;
 import com.models.City;
 import com.models.Country;
 import com.models.User;
 
-import javax.inject.Inject;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -33,13 +32,10 @@ public class ToolService {
     private static final int USER_DATE_OF_BIRTH_INDEX = 2;
     private static final int USER_CITY_ID_INDEX = 3;
 
-    private final FlatUserEntityDao flatUserEntityDao;
+
+    FlatEntityDao flatEntityDaoObj = new FlatEntityDao();
 
     private static Logger log = Logger.getLogger(ToolService.class.getName());
-    @Inject
-    public ToolService(FlatUserEntityDao flatUserEntityDao) {
-        this.flatUserEntityDao = flatUserEntityDao;
-    }
 
     public void importData(String userFilePath, String cityFilePath, String countryFilePath) {
         Map<Integer, City> cities =
@@ -55,7 +51,7 @@ public class ToolService {
                 LocalDate dateOfBirth = LocalDate.parse(row[USER_DATE_OF_BIRTH_INDEX]);
                 City city = cities.get(Integer.valueOf(row[USER_CITY_ID_INDEX]));
                 FlatUserEntity entity = UserConverter.toEntity(new User(id, name, dateOfBirth, city));
-                flatUserEntityDao.create(entity);
+                flatEntityDaoObj.insert(entity);
             }
         } catch (FileNotFoundException ex) {
             log.log(Level.SEVERE, "File not found ", ex);

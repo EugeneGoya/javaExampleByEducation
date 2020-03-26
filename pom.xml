@@ -74,17 +74,15 @@
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-hibernate</artifactId>
         </dependency>
-    </dependencies>
-    <!--            <groupId>org.springframework.boot</groupId>-->
-    <!--            <artifactId>spring-boot-starter-web</artifactId>-->
-    <!--        </dependency>-->
-    <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.cloudhoist/nginx &ndash;&gt;-->
-    <!--        <dependency>-->
-    <!--            <groupId>org.cloudhoist</groupId>-->
-    <!--            <artifactId>nginx</artifactId>-->
-    <!--            <version>0.5.0</version>-->
-    <!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.12.Final</version>
+        </dependency>
 
+
+    </dependencies>
 
     <profiles>
         <profile>

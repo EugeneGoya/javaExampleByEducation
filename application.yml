@@ -10,19 +10,10 @@ server:
       port: 8084
 
 database:
-  # the name of your JDBC driver
   driverClass: com.mysql.jdbc.Driver
-
-  # the username
   user: root
-
-  # the password
   password: 123456789
-
-  # the JDBC URL
   url: jdbc:mysql://localhost:3306/testDbForSimpleService
-#root
-#123456789
 #server:
 #  #  softNofileLimit: 1000
 #  #  hardNofileLimit: 1000
